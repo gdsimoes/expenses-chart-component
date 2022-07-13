@@ -48,13 +48,38 @@ body {
 }
 
 .container {
-  width: 90%;
+  width: 91.4666666667vw;
+  height: 142.4vw;
   background-color: white;
 }
 
 header {
   background-color: #ec755d;
   border-radius: 0.625rem;
+}
+
+main {
+  height: 78.8389513109%;
+}
+
+.week {
+  width: 88.3381924198%;
+  height: 42.0427553444%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.week .day {
+  width: 10.8910891089%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.week .day .bar {
+  width: 100%;
+  height: 84.7457627119%;
+  background-color: #ec755d;
 }
 
 /*# sourceMappingURL=style.css.map */
