@@ -3,6 +3,7 @@ $body-bg: #f8e9dd;
 $red: #ec755d;
 $dark-brown: #382314;
 $medium-brown: #92857a;
+$card-white: #fffbf6;
 
 // Typography
 html {
@@ -55,21 +56,39 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+}
+
+p {
+    margin: 0;
 }
 
 .container {
     width: ((343 * 100)/375) * 1vw;
     height: ((534 * 100)/375) * 1vw;
-    background-color: white;
 }
 
 header {
     background-color: $red;
-    border-radius: (10/16) * 1rem;
+    border-radius: (10/15) * 1rem;
+    padding: (21/15) * 1rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        width: (60 / 301) * 100%;
+    }
+}
+
+.title {
+    margin-top: 0;
+    margin-bottom: (4/15) * 1em;
 }
 
 main {
     height: (421 / 534) * 100%;
+    background-color: $card-white;
 }
 
 .week {

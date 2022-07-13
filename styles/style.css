@@ -45,21 +45,37 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+}
+
+p {
+  margin: 0;
 }
 
 .container {
   width: 91.4666666667vw;
   height: 142.4vw;
-  background-color: white;
 }
 
 header {
   background-color: #ec755d;
-  border-radius: 0.625rem;
+  border-radius: 0.6666666667rem;
+  padding: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+header img {
+  width: 19.9335548173%;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 0.2666666667em;
 }
 
 main {
   height: 78.8389513109%;
+  background-color: #fffbf6;
 }
 
 .week {
