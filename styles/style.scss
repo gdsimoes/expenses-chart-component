@@ -1,3 +1,68 @@
+// Colors
+$body-bg: #f8e9dd;
+$header-bg: #ec755d;
+$dark-brown: #382314;
+$medium-brown: #92857a;
+
+// Typography
+html {
+    font-family: "DM Sans", sans-serif;
+    font-size: ((15 * 100)/375) * 1vw;
+    font-weight: 700;
+}
+
+.title {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.balance {
+    color: white;
+
+    p {
+        font-size: (24 / 15) * 1rem;
+    }
+}
+
+h1 {
+    font-size: (24 / 15) * 1rem;
+    color: $dark-brown;
+}
+
+.day figcaption {
+    font-size: (12 / 15) * 1rem;
+    text-align: center;
+    font-weight: 400;
+    color: $medium-brown;
+}
+
+.footer-main {
+    color: $dark-brown;
+
+    .title {
+        color: $medium-brown;
+    }
+}
+
+.total p {
+    font-size: 2rem;
+}
+
+// Layout
 body {
-    background-color: azure;
+    background-color: $body-bg;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    background-color: white;
+}
+
+header {
+    background-color: $header-bg;
+    border-radius: (10/16) * 1rem;
 }

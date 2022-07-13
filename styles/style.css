@@ -1,5 +1,60 @@
+html {
+  font-family: "DM Sans", sans-serif;
+  font-size: 4vw;
+  font-weight: 700;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.balance {
+  color: white;
+}
+.balance p {
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 1.6rem;
+  color: #382314;
+}
+
+.day figcaption {
+  font-size: 0.8rem;
+  text-align: center;
+  font-weight: 400;
+  color: #92857a;
+}
+
+.footer-main {
+  color: #382314;
+}
+.footer-main .title {
+  color: #92857a;
+}
+
+.total p {
+  font-size: 2rem;
+}
+
 body {
-  background-color: azure;
+  background-color: #f8e9dd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  background-color: white;
+}
+
+header {
+  background-color: #ec755d;
+  border-radius: 0.625rem;
 }
 
 /*# sourceMappingURL=style.css.map */
