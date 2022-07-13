@@ -3,8 +3,6 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- displays site properly based on user's device -->
-
         <link
             rel="icon"
             type="image/png"
@@ -12,32 +10,78 @@
             href="./images/favicon-32x32.png"
         />
 
+        <!-- CSS Remedy: https://github.com/jensimmons/cssremedy -->
+        <link rel="stylesheet" href="styles/remedy.css" />
+
         <title>Frontend Mentor | Expenses chart component</title>
 
-        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-        <style>
-            .attribution {
-                font-size: 11px;
-                text-align: center;
-            }
-            .attribution a {
-                color: hsl(228, 45%, 44%);
-            }
-        </style>
-
+        <link rel="stylesheet" href="styles/style.css" />
         <script src="scripts/main.js" defer></script>
     </head>
     <body>
-        My balance $921.48 Spending - Last 7 days mon tue wed thu fri sat sun
-        Total this month $478.33 +2.4% from last month
+        <div class="container">
+            <header>
+                <div class="balance">
+                    <h2 class="title">My balance</h2>
+                    <p class="balance-p">$921.48</p>
+                </div>
+                <img src="images/logo.svg" alt="Logo" />
+            </header>
+            <main>
+                <h1>Spending - Last 7 days</h1>
+                <div class="week">
+                    <figure class="day">
+                        <div class="bar"></div>
+                        <figcaption>mon</figcaption>
+                    </figure>
+                    <figure class="day">
+                        <div class="bar"></div>
+                        <figcaption>tue</figcaption>
+                    </figure>
+                    <figure class="day">
+                        <div class="bar"></div>
+                        <figcaption>wed</figcaption>
+                    </figure>
+                    <figure class="day">
+                        <div class="bar"></div>
+                        <figcaption>thu</figcaption>
+                    </figure>
+                    <figure class="day">
+                        <div class="bar"></div>
+                        <figcaption>fri</figcaption>
+                    </figure>
+                    <figure class="day">
+                        <div class="bar"></div>
+                        <figcaption>sat</figcaption>
+                    </figure>
+                    <figure class="day">
+                        <div class="bar"></div>
+                        <figcaption>sun</figcaption>
+                    </figure>
+                </div>
+                <hr />
+                <footer class="footer-main">
+                    <div class="total">
+                        <h2 class="title">Total this month</h2>
+                        <p class="total-p">$478.33</p>
+                    </div>
+                    <div class="delta">
+                        <!-- I changed the order for screen reader users -->
+                        <h2 class="title">from last month</h2>
+                        <p class="delta-p">+2.4%</p>
+                    </div>
+                </footer>
+            </main>
+        </div>
 
-        <div class="attribution">
+        <footer class="footer-body">
             Challenge by
             <a
                 href="https://www.frontendmentor.io?ref=challenge"
                 target="_blank"
                 >Frontend Mentor</a
-            >. Coded by <a href="#">Your Name Here</a>.
-        </div>
+            >. Coded by
+            <a href="https://www.gdsimoes.com">Guilherme Dias Simoes</a>.
+        </footer>
     </body>
 </html>
