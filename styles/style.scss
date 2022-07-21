@@ -57,6 +57,7 @@ body {
     justify-content: center;
     align-items: center;
     height: (667 / 15) * 1rem;
+    min-height: 100vh;
 
     // I needed this to get the footer to work
     position: relative;
