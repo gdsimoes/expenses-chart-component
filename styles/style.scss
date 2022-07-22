@@ -49,14 +49,14 @@ h1 {
     font-size: 2rem;
 }
 
-// Layout
+// Base Layout
 body {
     background-color: $cream-bg;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: (667 / 15) * 1rem;
+    // height: (667 / 15) * 1rem;
     min-height: 100vh;
 
     // I needed this to get the footer to work
@@ -134,7 +134,8 @@ main {
 }
 
 hr {
-    color: $cream-bg;
+    background-color: $cream-bg;
+    border: none;
     height: (2 / 15) * 1rem;
     margin-top: 0;
     margin-bottom: (24 / 15) * 1rem;
@@ -176,4 +177,101 @@ hr {
 
 .footer-body a:hover {
     text-decoration: underline;
+}
+
+// Big width typography and layout
+@media (min-width: 700px) {
+    // Typography
+    html {
+        font-size: 18px;
+    }
+
+    .balance p {
+        font-size: 32px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .day figcaption {
+        font-size: 15px;
+    }
+
+    .total p {
+        font-size: 48px;
+        line-height: 62px;
+    }
+
+    // Layout
+    .container {
+        width: 540px;
+        height: 660px;
+    }
+
+    header {
+        border-radius: 20px;
+        padding: 26px 32px;
+        margin-bottom: 24px;
+
+        display: flex;
+        justify-content: space-between;
+
+        img {
+            width: 72px;
+            margin-right: 7px;
+        }
+    }
+
+    .title {
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+
+    main {
+        height: 511px;
+        padding: 32px 40px;
+        border-radius: 20px;
+
+        h1 {
+            margin-top: 0;
+            margin-bottom: 66px;
+        }
+    }
+
+    .week {
+        height: 210px;
+
+        .day {
+            width: 50.36px;
+
+            figcaption {
+                margin-top: 8px;
+                margin-bottom: 32px;
+            }
+
+            .bar {
+                border-radius: 5px;
+            }
+        }
+    }
+
+    hr {
+        height: 2px;
+        margin-bottom: 32px;
+    }
+
+    .footer-main {
+        height: 87px;
+
+        .title {
+            margin: 0;
+        }
+    }
+
+    .footer-body {
+        position: absolute;
+        bottom: 4%;
+        font-size: 13px;
+    }
 }
