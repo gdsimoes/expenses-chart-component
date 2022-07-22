@@ -111,6 +111,9 @@ main h1 {
   background-color: #ec755d;
   border-radius: 0.2rem;
 }
+.week .day .bar:hover {
+  background-color: #ff9b86;
+}
 
 hr {
   background-color: #f8e9dd;
@@ -230,6 +233,30 @@ hr {
     bottom: 4%;
     font-size: 13px;
   }
+}
+.bar {
+  position: relative;
+}
+
+.bar::after {
+  content: attr(data-amount);
+  display: block;
+  position: absolute;
+  background-color: #382314;
+  color: #fffbf6;
+  border-radius: 5px;
+  height: 40px;
+  padding: 0 8.25px;
+  text-align: center;
+  line-height: 40px;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translate(-50%) scale(0);
+  transition: transform ease-out 150ms;
+}
+
+.bar:hover::after {
+  transform: translate(-50%) scale(1);
 }
 
 /*# sourceMappingURL=style.css.map */

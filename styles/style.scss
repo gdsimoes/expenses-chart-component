@@ -1,6 +1,7 @@
 // Colors
 $cream-bg: #f8e9dd;
 $red: #ec755d;
+$faded-red: #ff9b86;
 $dark-brown: #382314;
 $medium-brown: #92857a;
 $card-white: #fffbf6;
@@ -129,6 +130,10 @@ main {
             transition: height 2.5s ease-out;
             background-color: $red;
             border-radius: (3 / 15) * 1rem;
+        }
+
+        .bar:hover {
+            background-color: $faded-red;
         }
     }
 }
@@ -274,4 +279,33 @@ hr {
         bottom: 4%;
         font-size: 13px;
     }
+}
+
+// Tooltip
+.bar {
+    position: relative;
+}
+
+.bar::after {
+    content: attr(data-amount);
+    display: block;
+    position: absolute;
+    background-color: $dark-brown;
+    color: $card-white;
+    border-radius: 5px;
+    // width: 75px;
+    height: 40px;
+    padding: 0 8.25px;
+    text-align: center;
+    line-height: 40px;
+
+    left: 50%;
+    bottom: calc(100% + 8px);
+
+    transform: translate(-50%) scale(0);
+    transition: transform ease-out 150ms;
+}
+
+.bar:hover::after {
+    transform: translate(-50%) scale(1);
 }

@@ -2,6 +2,7 @@
 
 // Draw graph
 const cyan = "#76B5BC";
+const fadedCyan = "#B4E0E5";
 
 async function getData(url) {
     const requestURL = url;
@@ -20,28 +21,27 @@ function populateBars(jsonArr) {
         0
     );
 
+    let height;
     if (window.innerWidth >= 700) {
-        for (const obj of jsonArr) {
-            const bar = document.querySelector(`#${obj.day}`);
-            bar.style.height = `${(obj.amount / maxAmount) * 150}px`;
-            bar.style.transitionDuration = `${(obj.amount / maxAmount) * 2}s`;
-            if (obj.amount === maxAmount) {
-                bar.style.backgroundColor = cyan;
-            }
-        }
+        height = (ratio) => `${ratio * 150}px`;
     } else {
-        for (const obj of jsonArr) {
-            const bar = document.querySelector(`#${obj.day}`);
-
-            bar.style.height = `${
-                (150 / 375) * (obj.amount / maxAmount) * 100
-            }vw`;
-            bar.style.transitionDuration = `${(obj.amount / maxAmount) * 2}s`;
-            if (obj.amount === maxAmount) {
-                bar.style.backgroundColor = cyan;
-            }
-        }
+        height = (ratio) => `${(150 / 375) * ratio * 100}vw`;
     }
+
+    for (const obj of jsonArr) {
+        const bar = document.querySelector(`#${obj.day}`);
+        const ratio = obj.amount / maxAmount;
+        bar.style.height = height(ratio);
+        bar.style.transitionDuration = `${ratio * 2}s`;
+        bar.dataset.amount = `$${obj.amount}`;
+    }
+
+    // Highlight current day with a different color
+    const weekDayIndex = (new Date().getDay() - 1 + 7) % 7;
+    const currBar = document.querySelectorAll(".bar")[weekDayIndex];
+    currBar.style.backgroundColor = cyan;
+    currBar.onmouseover = () => (currBar.style.backgroundColor = fadedCyan);
+    currBar.onmouseout = () => (currBar.style.backgroundColor = cyan);
 }
 
 getData("data.json");
